@@ -3,15 +3,13 @@ package org.leanpoker.player;
 import com.google.gson.JsonElement;
 
 import java.util.Map;
+import java.util.UUID;
 
 public class Player {
 
-    static final String VERSION = "Default Java folding player";
+    static final String VERSION = "0.0.1";
 
     public static int betRequest(JsonElement request) {
-        System.out.println("Wir sind dabei, Hurra!");
-        System.out.println(request.getAsJsonObject().toString());
-        System.out.println("Wir sind dabei, Hurra! die zweite");
         return 1;
     }
 
