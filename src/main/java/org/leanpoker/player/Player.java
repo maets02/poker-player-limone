@@ -12,7 +12,7 @@ public class Player {
         System.out.println("Wir sind dabei, Hurra!");
         System.out.println(request.getAsJsonObject().toString());
         System.out.println("Wir sind dabei, Hurra! die zweite");
-        return 0;
+        return 1;
     }
 
     public static void showdown(JsonElement game) {
