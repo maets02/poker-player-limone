@@ -7,9 +7,10 @@ import java.util.UUID;
 
 public class Player {
 
-    static final String VERSION = "0.0.2";
+    static final String VERSION = "0.0.3";
 
     public static int betRequest(JsonElement request) {
+        System.out.print(request);
         return 210;
     }
 
