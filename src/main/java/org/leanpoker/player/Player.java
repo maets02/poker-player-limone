@@ -11,6 +11,7 @@ public class Player {
     public static int betRequest(JsonElement request) {
         System.out.println("Wir sind dabei, Hurra!");
         System.out.println(request.getAsJsonObject().toString());
+        System.out.println("Wir sind dabei, Hurra! die zweite");
         return 0;
     }
 
