@@ -12,7 +12,7 @@ import com.google.gson.JsonPrimitive;
 
 public class Player {
 
-    static final String VERSION = "0.0.12";
+    static final String VERSION = "0.0.13";
 
     public static int betRequest(JsonElement request) {
         int round = request.getAsJsonObject().getAsJsonPrimitive("round").getAsInt();
@@ -70,16 +70,20 @@ public class Player {
                             if (c.suite.equals(card1.suite)) suitCountPublic++;
                         }
                         if (suitCountPublic == 3) {
-                            System.out.println("limone_All in " + stack);
-                            return stack;
+                            int halfAllIn = stack / 2;
+                            if (halfAllIn < bettingAmount) return bettingAmount;
+                            System.out.println("limone_Half All in " + halfAllIn);
+                            return halfAllIn;
                         }
                     }
 
                     if (publicCardRanks.size() == 5) {
                         for (int x : countsByRank.values()) {
                             if (x >= 3) {
-                                System.out.println("limone_All in " + stack);
-                                return stack;
+                                int halfAllIn = stack / 2;
+                                if (halfAllIn < bettingAmount) return bettingAmount;
+                                System.out.println("limone_Half All in " + halfAllIn);
+                                return halfAllIn;
                             }
                         }
                     }
